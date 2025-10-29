@@ -1,0 +1,14 @@
+mensaje = "hola"
+clave = "0110"
+
+def XOR(mensaje, clave):
+    encriptado = ""
+    for i in range(len(mensaje)):
+        encriptado += chr(ord(mensaje[i]) ^ ord(clave[i % len(clave)]))
+    return encriptado
+
+x = XOR(mensaje, clave)
+y = XOR(x, clave)
+
+print("Encriptado:", x)
+print("Desencriptado:", y)
