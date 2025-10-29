@@ -1,0 +1,17 @@
+mensaje = [0,1,1,0,1,0,0,0]
+clave   = [0,1,1,0,1,1,1,1]
+
+def XOR_bits(mensaje, clave):
+    encriptado = []
+    for i in range(len(mensaje)):
+        encriptado.append(mensaje[i] ^ clave[i])
+    return encriptado
+
+# Cifrar
+x = XOR_bits(mensaje, clave)
+# Descifrar
+y = XOR_bits(x, clave)
+
+print("Mensaje original:", mensaje)
+print("Encriptado:", x)
+print("Desencriptado:", y)
